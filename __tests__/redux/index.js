@@ -17,7 +17,10 @@ const reducer = (state = defaultState, action) => {
       return state;
   }
 }
-debugger
+
+// 测试 No reducer provided 执行 warning 函数
+let noReducer; 
+debugger;
 const reducers = Redux.combineReducers({ treasury:reducer });
 const store = Redux.createStore(reducers);
 store.subscribe(()=>{
