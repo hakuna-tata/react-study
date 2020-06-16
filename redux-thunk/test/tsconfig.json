@@ -1,7 +1,0 @@
-{
-  "compilerOptions": {
-    "lib": ["dom", "es2017"],
-    "strict": true
-  },
-  "files": ["./*.ts", "./*.js"]
-}
