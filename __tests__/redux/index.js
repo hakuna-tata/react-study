@@ -39,7 +39,7 @@ const reducer2 = (state = defaultState, action) => {
 let noReducer; 
 debugger;
 const reducers = Redux.combineReducers({ reducer1, reducer2 });
-const store = Redux.createStore(reducers);
+const store = Redux.createStore(reducers, Redux.applyMiddleware(ReduxThunk.default, reduxLogger.logger));
 // 执行 unSubscribe 会取消订阅，但 state 还是可以直接修改的
 const unSubscribe = store.subscribe(()=>{
   console.log(`余额：${store.getState().reducer1.cash}`);
